@@ -1,3 +1,5 @@
+import LinkedList.DoublyLinkedList;
+
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -92,13 +94,36 @@ public class Demo {
         ar.add(15);
         ar.add(7);
 
-        System.out.println(ar.toString());
+        System.out.println("Array: "+ ar.toString());
         ar.remove(15);
-        System.out.println(ar.toString());
-        ar.add(15);
-        Iterator itr = ar.iterator();
-        while(itr.hasNext())
-            System.out.println(itr.next());
+        System.out.println("Array: "+ ar.toString());
+//        ar.add(15);
+//        Iterator itr = ar.iterator();
+//        while(itr.hasNext())
+//            System.out.println(itr.next());
+
+        DoublyLinkedList list =new DoublyLinkedList();
+        list.add(5);
+        list.add(7);
+        list.add(9);
+        System.out.println("DoublyLinkedList: "+ list.toString() + ", Size: "+ list.size());
+        list.addAtLast(11);
+        //System.out.println("DoublyLinkedList: "+ list.toString() + ", Size: "+ list.size());
+        list.adAtBegin(10);
+        //System.out.println("DoublyLinkedList: "+ list.toString() + ", Size: "+ list.size());
+        list.addAtIndex(0, 1);
+        //System.out.println("DoublyLinkedList: "+ list.toString() + ", Size: "+ list.size());
+        list.addAtIndex(5, 12);
+        //System.out.println("DoublyLinkedList: "+ list.toString() + ", Size: "+ list.size());
+        list.addAtIndex(2, 21);
+        System.out.println("DoublyLinkedList: "+ list + ", Size: "+ list.size());
+
+        list.removeFromFirst();
+        list.removeFromLast();
+        list.remove(11);
+        list.removeAt(2);
+        System.out.println("DoublyLinkedList: "+ list + ", Size: "+ list.size());
+
 
     }
 
